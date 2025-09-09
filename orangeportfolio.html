@@ -417,20 +417,16 @@
             box-shadow: 0 40px 80px rgba(255, 69, 0, 0.2);
         }
 
-        /* Image Gallery Styles */
-        .project-gallery {
+        
+       .project-gallery {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             overflow: hidden;
-            z-index: 1;
         }
 
         .gallery-container {
             display: flex;
-            width: 200%;
+            width: 100%;
             height: 100%;
             transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -439,14 +435,14 @@
             flex: 0 0 100%;
             height: 100%;
             position: relative;
-            background: var(--secondary-orange);
         }
 
         .gallery-slide img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: center;
+            object-fit: contain;     
+            object-position: center; 
+            display: block;
         }
 
         .gallery-slide:nth-child(2) {
